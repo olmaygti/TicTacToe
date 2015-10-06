@@ -16,6 +16,7 @@
     "angular": "~1.4.6",
     "bootstrap": "~3.3.5",
     "angular-ui-router": "~0.2.15",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "pubnub-angular": "~1.1.0"
   }
 }

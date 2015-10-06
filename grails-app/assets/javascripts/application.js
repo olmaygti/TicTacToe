@@ -9,6 +9,7 @@
 //= require ./lib/lodash/dist/lodash.js
 //= require ./lib/angular/angular.js
 //= require ./lib/angular-ui-router/release/angular-ui-router.js
+//= require ./lib/pubnub-angular/lib/pubnub-angular.js
 //= require ./customLib/awesome-resource.js
 // Application source code
 //= require ./models/models.js
