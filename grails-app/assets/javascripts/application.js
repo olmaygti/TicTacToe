@@ -6,8 +6,11 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery
+//= require ./lib/lodash/dist/lodash.js
 //= require ./lib/angular/angular.js
 //= require ./lib/angular-ui-router/release/angular-ui-router.js
+//= require ./customLib/awesome-resource.js
 // Application source code
+//= require ./models/models.js
 //= require ticTac.js
 //= require urlMappings.js
