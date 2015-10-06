@@ -13,10 +13,13 @@ angular.module('ticTacApp.models', ['awesomeResources'])
                         _(3).range().each(function (index) {
                             // We might have to define the Cell  model at some point
                             self.board[idx].push({
-                                empty:true
+                                style: 'empty'
                             });
                         })
                     });
+                },
+                gameOver: function (lastCellMoved) {
+                    return this.finished = false;
                 }
             }
         });

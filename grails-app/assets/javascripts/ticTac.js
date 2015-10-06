@@ -19,10 +19,11 @@
             }
 
             $scope.move = function (cell) {
-
-                console.log((ctx.currentPlayer.name) + ' moved to ' + cell);
-
-                console.log('Next player is: ', nextPlayer());
+                cell.empty = false;
+                cell.player = ctx.currentPlayer;
+                cell.style = cell.player.style;
+                ctx.currentPlayer = nextPlayer();
+                ctx.gameOver = board.gameOver(cell);
             }
 
             $scope.startGame = function () {
