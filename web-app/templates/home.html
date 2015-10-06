@@ -1,26 +1,27 @@
 <div class="col-md-12">
-    <h3>Welcome To Tic Tac Toe Application!</h3>
+    <h2>Welcome To Tic Tac Toe Application!</h2>
     <div class="board" data-ng-if="ctx.board">
+            <h3 data-ng-if="ctx.board.finished">
+                Game finished, contragulations: {{ ctx.currentPlayer.name }}
+            </h3>
         <table>
             <tbody>
                 <tr data-ng-repeat="row in ctx.board.board">
-                    <td data-ng-repeat="cell in row">
-                        <div class="cell-content clickable"
-                            data-ng-class="cell.style"
-                            data-ng-click="move(cell);">
+                     <td data-ng-repeat="cell in row">
+                        <div class="cell-content"
+                            data-ng-class="[cell.style, {'clickable' : !cell.player && !ctx.board.finished }]"
+                            data-ng-click="!cell.player && !ctx.board.finished && move(cell);">
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <div class="notifications">
+        <div class="notifications" data-ng-if="ctx.board.finished">
             <span>
                 Awaiting movement {{ ctx.currentPlayer.name}}
             </span>
             <hr>
-            <span>
-                Game finished: {{ ctx.board.finished }}
-            </span>
+
         </div>
     </div>
     <button class="btn btn-primary" ng-click="startGame()">Start</button>

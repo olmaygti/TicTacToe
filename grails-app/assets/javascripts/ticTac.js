@@ -22,8 +22,9 @@
                 cell.empty = false;
                 cell.player = ctx.currentPlayer;
                 cell.style = cell.player.style;
-                ctx.currentPlayer = nextPlayer();
-                ctx.gameOver = board.gameOver(cell);
+                if (!board.gameOver(cell)) {
+                    ctx.currentPlayer = nextPlayer();
+                };
             }
 
             $scope.startGame = function () {
