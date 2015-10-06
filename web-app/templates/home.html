@@ -5,7 +5,8 @@
             <tbody>
                 <tr data-ng-repeat="row in ctx.board.board">
                     <td data-ng-repeat="cell in row">
-                        <div class="cell-content"
+                        <div class="cell-content clickable"
+                            data-ng-class="cell.style"
                             data-ng-click="move(cell);">
                             {{ cell.empty}}
                         </div>
