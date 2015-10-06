@@ -1,4 +1,7 @@
 
+.board td {
+    padding: 5px;
+}
 .cell-content {
     height: 50px !important;
     width: 50px !important;
@@ -13,9 +16,11 @@
 }
 
 .cross {
-    background-image: url('../images/cross.png')
+    background-image: url('../images/cross.png');
+    background-color: #FAFAFA;
 }
 
 .circle {
-    background-image: url('../images/circle.png')
+    background-image: url('../images/circle.png');
+    background-color: #FAFAFA;
 }
