@@ -1,2 +1,4 @@
 wrapper/*
+grails-app/assets/javascripts/lib/**
+target/**
 
