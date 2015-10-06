@@ -6,15 +6,8 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery
-//= require_tree .
-//= require_self
-
-if (typeof jQuery !== 'undefined') {
-	(function($) {
-		$('#spinner').ajaxStart(function() {
-			$(this).fadeIn();
-		}).ajaxStop(function() {
-			$(this).fadeOut();
-		});
-	})(jQuery);
-}
+//= require ./lib/angular/angular.js
+//= require ./lib/angular-ui-router/release/angular-ui-router.js
+// Application source code
+//= require ticTac.js
+//= require urlMappings.js
