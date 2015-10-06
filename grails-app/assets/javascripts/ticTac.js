@@ -6,7 +6,7 @@
             'Player',
             'Board',
             function ($scope, Player, Board) {
-            var ctx;
+            var ctx, board;
 
             console.log('controller wired');
 
@@ -15,8 +15,8 @@
             }
 
             $scope.startGame = function () {
-                ctx.message = 'Starting new game, under construction';
-                ctx.board = new Board();
+                ctx.board = board = new Board();
+                board.initBoard();
             }
             init();
         }]);

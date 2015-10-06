@@ -1,8 +1,17 @@
 <div class="col-md-12">
     <h3>Welcome To Tic Tac Toe Application!</h3>
+    <div class="board" data-ng-if="ctx.board">
+        <table>
+            <tbody>
+                <tr data-ng-repeat="row in ctx.board.board">
+                    <td data-ng-repeat="cell in row">
+                        <div class="cell-content">
+                            {{ cell.empty}}
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <button class="btn btn-primary" ng-click="startGame()">Start</button>
-    <span data-ng-if="ctx.message">
-        {{ctx.message}}
-        {{ ctx.board }}
-    </span>
 </div>
