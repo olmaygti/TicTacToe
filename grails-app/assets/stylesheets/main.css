@@ -1,0 +1,21 @@
+
+.cell-content {
+    height: 50px !important;
+    width: 50px !important;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.empty {
+    background-color: #FAFAFA;
+}
+
+.cross {
+    background-image: url('../images/cross.png')
+}
+
+.circle {
+    background-image: url('../images/circle.png')
+}
