@@ -5,13 +5,19 @@
             <tbody>
                 <tr data-ng-repeat="row in ctx.board.board">
                     <td data-ng-repeat="cell in row">
-                        <div class="cell-content">
+                        <div class="cell-content"
+                            data-ng-click="move(cell);">
                             {{ cell.empty}}
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
+        <div class="notifications">
+            <span>
+                Awaiting movement {{ ctx.currentPlayer.name}}
+            </span>
+        </div>
     </div>
     <button class="btn btn-primary" ng-click="startGame()">Start</button>
 </div>
